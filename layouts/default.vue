@@ -110,6 +110,11 @@ export default {
           icon: 'mdi-form-select',
           title: 'Form Sample',
           to: '/form'
+        },
+        {
+          icon: 'mdi-table',
+          title: 'Table Sample',
+          to: '/table'
         }
       ],
       miniVariant: false,
