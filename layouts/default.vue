@@ -115,6 +115,11 @@ export default {
           icon: 'mdi-table',
           title: 'Table Sample',
           to: '/table'
+        },
+        {
+          icon: 'mdi-list',
+          title: 'List Sample',
+          to: '/list'
         }
       ],
       miniVariant: false,
