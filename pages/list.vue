@@ -128,7 +128,7 @@ export default {
           headline: 'Brunch this weekend?',
           subtitle: "I'll be in your neighborhood doing errands this weekend. Do you want to hang out?",
           title: 'Ali Connors',
-          status : 'a',
+          status : 'aa',
           type : 'b'
         },
         {
@@ -136,7 +136,7 @@ export default {
           headline: 'Summer BBQ',
           subtitle: "Wish I could come, but I'm out of town this weekend.",
           title: 'me, Scrott, Jennifer',
-          status : 'a',
+          status : 'aa',
           type : 'c'
         },
         {
@@ -144,7 +144,7 @@ export default {
           headline: 'Oui oui',
           subtitle: 'Do you have Paris recommendations? Have you ever been?',
           title: 'Sandra Adams',
-          status : 'b',
+          status : 'bb',
           type : 'a'
         },
         {
@@ -152,7 +152,7 @@ export default {
           headline: 'Birthday gift',
           subtitle: 'Have any ideas about what we should get Heidi for her birthday?',
           title: 'Trevor Hansen',
-          status : 'c',
+          status : 'cc',
           type : 'd'
         },
         {
@@ -160,7 +160,7 @@ export default {
           headline: 'Recipe to try',
           subtitle: 'We should eat this: Grate, Squash, Corn, and tomatillo Tacos.',
           title: 'Britta Holt',
-          status : 'd',
+          status : 'dd',
           type : 'a'
         }
       ],
@@ -169,18 +169,12 @@ export default {
   computed: {
     filteredItems() {
       return this.items.filter(item => {
-        if(!this.search) return this.items;
-        return (item.title.toLowerCase().includes(this.search.toLowerCase()) ||
-          item.action.toLowerCase().includes(this.search.toLowerCase())   ||
-          item.headline.toLowerCase().includes(this.search.toLowerCase()) ||
-          item.subtitle.toLowerCase().includes(this.search.toLowerCase()));
+        if(!this.search && !this.selectStatus && !this.selectType) return this.items;
+        return (item.title.toLowerCase().includes(this.search.toLowerCase()) && item.status.includes(this.selectStatus) && item.type.includes(this.selectType));
       });
     }
   },
   methods: {
-    clearSearch () {
-      this.search="";
-    },
     statusFilter(value) {
       return this.items.filter(item => {
         if(!value) return this.items;
