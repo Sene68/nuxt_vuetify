@@ -120,6 +120,11 @@ export default {
           icon: 'mdi-list',
           title: 'List Sample',
           to: '/list'
+        },
+        {
+          icon: 'mdi-list',
+          title: 'Sandbox Sample',
+          to: '/card'
         }
       ],
       miniVariant: false,
