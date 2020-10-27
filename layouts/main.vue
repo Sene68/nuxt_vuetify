@@ -89,52 +89,52 @@
 </template>
 
 <script>
-  export default {
-    data () {
-      return {
-        clipped: false,
-        drawer: false,
-        fixed: false,
-        items: [
-          {
-            icon: 'mdi-apps',
-            title: 'Welcome',
-            to: '/'
-          },
-          {
-            icon: 'mdi-chart-bubble',
-            title: 'Inspire',
-            to: '/inspire'
-          },
-          {
-            icon: 'mdi-form-select',
-            title: 'Form Sample',
-            to: '/form'
-          },
-          {
-            icon: 'mdi-table',
-            title: 'Table Sample',
-            to: '/table'
-          },
-          {
-            icon: 'mdi-list',
-            title: 'List Sample',
-            to: '/list'
-          },
-          {
-            icon: 'mdi-list',
-            title: 'Sandbox Sample',
-            to: '/card'
-          }
-        ],
-        miniVariant: false,
-        right: true,
-        rightDrawer: false,
-        title: 'Vuetify.js'
-      }
+export default {
+  data () {
+    return {
+      clipped: false,
+      drawer: false,
+      fixed: false,
+      items: [
+        {
+          icon: 'mdi-apps',
+          title: 'Welcome',
+          to: '/'
+        },
+        {
+          icon: 'mdi-chart-bubble',
+          title: 'Inspire',
+          to: '/inspire'
+        },
+        {
+          icon: 'mdi-form-select',
+          title: 'Form Sample',
+          to: '/form'
+        },
+        {
+          icon: 'mdi-table',
+          title: 'Table Sample',
+          to: '/table'
+        },
+        {
+          icon: 'mdi-table',
+          title: 'List Sample',
+          to: '/list'
+        },
+        {
+          icon: 'mdi-table',
+          title: 'Sandbox Sample',
+          to: '/card'
+        }
+      ],
+      miniVariant: false,
+      right: true,
+      rightDrawer: false,
+      title: 'Vuetify.js'
     }
   }
+}
 </script>
 <style>
-  .main-bg { background-color: #eef0f8 }
+.main-bg { background-color: #eef0f8 }
 </style>

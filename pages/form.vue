@@ -1,76 +1,74 @@
 <template>
-  <v-main>
-    <v-card
-      class="mx-auto"
-      max-width="500"
-      outlined
-    >
-      <v-card-title>
-        Form Sample
-      </v-card-title>
+  <v-card
+    class="mx-auto"
+    max-width="500"
+    outlined
+  >
+    <v-card-title>
+      Form Sample
+    </v-card-title>
 
-      <v-divider></v-divider>
+    <v-divider></v-divider>
 
-      <v-card-text>
-        <v-form
-          ref="form"
-          v-model="valid"
-          lazy-validation
-        >
-          <div class="text-sm-body-2">Text</div>
-          <v-text-field
-            outlined
-            required
-            dense
-          ></v-text-field>
-
-          <div class="text-sm-body-2">Password</div>
-          <v-text-field
-            outlined
-            required
-            dense
-            type="password"
-          ></v-text-field>
-
-          <div class="text-sm-body-2">Select</div>
-          <v-combobox
-            v-model="select"
-            :items="items"
-            outlined
-            dense
-          ></v-combobox>
-
-          <div class="text-sm-body-2">Textarea</div>
-          <v-textarea
-            outlined
-            name="input-7-4"
-          ></v-textarea>
-        </v-form>
-      </v-card-text>
-
-      <v-divider></v-divider>
-
-      <v-card-actions>
-        <v-spacer></v-spacer>
-        <v-btn
+    <v-card-text>
+      <v-form
+        ref="form"
+        v-model="valid"
+        lazy-validation
+      >
+        <div class="text-sm-body-2">Text</div>
+        <v-text-field
           outlined
-          small
-          color="success"
-          class="mr-4"
-        >
-          Submit
-        </v-btn>
+          required
+          dense
+        ></v-text-field>
 
-        <v-btn
+        <div class="text-sm-body-2">Password</div>
+        <v-text-field
           outlined
-          small
-          class="mr-4"
-        >
-          Cancel
-        </v-btn>
-      </v-card-actions>
-    </v-card>
-  </v-main>
+          required
+          dense
+          type="password"
+        ></v-text-field>
+
+        <div class="text-sm-body-2">Select</div>
+        <v-combobox
+          v-model="select"
+          :items="items"
+          outlined
+          dense
+        ></v-combobox>
+
+        <div class="text-sm-body-2">Textarea</div>
+        <v-textarea
+          outlined
+          name="input-7-4"
+        ></v-textarea>
+      </v-form>
+    </v-card-text>
+
+    <v-divider></v-divider>
+
+    <v-card-actions>
+      <v-spacer></v-spacer>
+      <v-btn
+        outlined
+        small
+        color="success"
+        class="mr-4"
+      >
+        Submit
+      </v-btn>
+
+      <v-btn
+        outlined
+        small
+        class="mr-4"
+      >
+        Cancel
+      </v-btn>
+    </v-card-actions>
+  </v-card>
 </template>
 
 <script>

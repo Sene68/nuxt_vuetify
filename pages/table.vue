@@ -1,62 +1,61 @@
 <template>
-  <v-main>
-    <v-card
-      class="mx-auto"
-      max-width="1200"
-      outlined
-    >
-      <v-card-title>
-        Table Sample
-        <v-spacer></v-spacer>
-        <v-btn
+  <v-card
+    class="mx-auto"
+    max-width="1200"
+    outlined
+  >
+    <v-card-title>
+      Table Sample
+      <v-spacer></v-spacer>
+      <v-btn
+        outlined
+        large
+        color="success"
+        class="mr-4"
+      >
+        Submit
+      </v-btn>
+    </v-card-title>
+    <v-row class="mx-auto">
+      <v-col cols="3">
+        <v-text-field
+          v-model="search"
+          append-icon="mdi-magnify"
+          label="Search"
           outlined
-          large
-          color="success"
-          class="mr-4"
-        >
-          Submit
-        </v-btn>
-      </v-card-title>
-      <v-row class="mx-auto">
-        <v-col cols="3">
-          <v-text-field
-            v-model="search"
-            append-icon="mdi-magnify"
-            label="Search"
-            outlined
-            dense
-            hide-details
-          ></v-text-field>
-        </v-col>
-        <v-col cols="3">
-          <v-select
-            :items="status"
-            v-model="selectStatus"
-            label="Status"
-            outlined
-            dense
-          ></v-select>
-        </v-col>
-        <v-col cols="3">
-          <v-select
-            :items="types"
-            v-model="selectType"
-            label="Type"
-            outlined
-            dense
-          ></v-select>
-        </v-col>
-      </v-row>
-      <v-data-table
-        :headers="headers"
-        :items="desserts"
-        :search="search"
-      ></v-data-table>
-    </v-card>
-  </v-main>
+          dense
+          hide-details
+        ></v-text-field>
+      </v-col>
+      <v-col cols="3">
+        <v-select
+          :items="status"
+          v-model="selectStatus"
+          label="Status"
+          outlined
+          dense
+        ></v-select>
+      </v-col>
+      <v-col cols="3">
+        <v-select
+          :items="types"
+          v-model="selectType"
+          label="Type"
+          outlined
+          dense
+        ></v-select>
+      </v-col>
+    </v-row>
+    <v-data-table
+      :headers="headers"
+      :items="desserts"
+      :search="search"
+    ></v-data-table>
+  </v-card>
 </template>
 <script>
   export default {
+    layout: 'main',
     data () {
       return {
         search: '',

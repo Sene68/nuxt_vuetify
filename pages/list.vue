@@ -101,86 +101,79 @@
   </v-card>
 </template>
 <script>
-export default {
-  data () {
-    return {
-      selected: [],
-      search: '',
-      selectStatus: null,
-      status: [
-        { text: 'All', value : null },
-        { text: 'select 1', value : 'aa' },
-        { text: 'select 2', value : 'bb' },
-        { text: 'select 3', value : 'cc' },
-        { text: 'select 4', value : 'dd' },
-      ],
-      selectType: null,
-      types: [
-        { text: 'All', value : null },
-        { text: 'types 1', value : 'a' },
-        { text: 'types 2', value : 'b' },
-        { text: 'types 3', value : 'c' },
-        { text: 'types 4', value : 'd' },
-      ],
-      items: [
-        {
-          action: '15 min',
-          headline: 'Brunch this weekend?',
-          subtitle: "I'll be in your neighborhood doing errands this weekend. Do you want to hang out?",
-          title: 'Ali Connors',
-          status : 'aa',
-          type : 'b'
-        },
-        {
-          action: '2 hr',
-          headline: 'Summer BBQ',
-          subtitle: "Wish I could come, but I'm out of town this weekend.",
-          title: 'me, Scrott, Jennifer',
-          status : 'aa',
-          type : 'c'
-        },
-        {
-          action: '6 hr',
-          headline: 'Oui oui',
-          subtitle: 'Do you have Paris recommendations? Have you ever been?',
-          title: 'Sandra Adams',
-          status : 'bb',
-          type : 'a'
-        },
-        {
-          action: '12 hr',
-          headline: 'Birthday gift',
-          subtitle: 'Have any ideas about what we should get Heidi for her birthday?',
-          title: 'Trevor Hansen',
-          status : 'cc',
-          type : 'd'
-        },
-        {
-          action: '18hr',
-          headline: 'Recipe to try',
-          subtitle: 'We should eat this: Grate, Squash, Corn, and tomatillo Tacos.',
-          title: 'Britta Holt',
-          status : 'dd',
-          type : 'a'
-        }
-      ],
-    }
-  },
-  computed: {
-    filteredItems() {
-      return this.items.filter(item => {
-        if(!this.search && !this.selectStatus && !this.selectType) return this.items;
-        return (item.title.toLowerCase().includes(this.search.toLowerCase()) && item.status.includes(this.selectStatus) && item.type.includes(this.selectType));
-      });
-    }
-  },
-  methods: {
-    statusFilter(value) {
-      return this.items.filter(item => {
-        if(!value) return this.items;
-        return (item.status.includes(value));
-      });
+  export default {
+    layout: 'main',
+    data () {
+      return {
+        selected: [],
+        search: '',
+        selectStatus: null,
+        status: [
+          { text: 'All', value : null },
+          { text: 'select 1', value : 'aa' },
+          { text: 'select 2', value : 'bb' },
+          { text: 'select 3', value : 'cc' },
+          { text: 'select 4', value : 'dd' },
+        ],
+        selectType: null,
+        types: [
+          { text: 'All', value : null },
+          { text: 'types 1', value : 'a' },
+          { text: 'types 2', value : 'b' },
+          { text: 'types 3', value : 'c' },
+          { text: 'types 4', value : 'd' },
+        ],
+        items: [
+          {
+            action: '15 min',
+            headline: 'Brunch this weekend?',
+            subtitle: "I'll be in your neighborhood doing errands this weekend. Do you want to hang out?",
+            title: 'Ali Connors',
+            status : 'aa',
+            type : 'b'
+          },
+          {
+            action: '2 hr',
+            headline: 'Summer BBQ',
+            subtitle: "Wish I could come, but I'm out of town this weekend.",
+            title: 'me, Scrott, Jennifer',
+            status : 'aa',
+            type : 'c'
+          },
+          {
+            action: '6 hr',
+            headline: 'Oui oui',
+            subtitle: 'Do you have Paris recommendations? Have you ever been?',
+            title: 'Sandra Adams',
+            status : 'bb',
+            type : 'a'
+          },
+          {
+            action: '12 hr',
+            headline: 'Birthday gift',
+            subtitle: 'Have any ideas about what we should get Heidi for her birthday?',
+            title: 'Trevor Hansen',
+            status : 'cc',
+            type : 'd'
+          },
+          {
+            action: '18hr',
+            headline: 'Recipe to try',
+            subtitle: 'We should eat this: Grate, Squash, Corn, and tomatillo Tacos.',
+            title: 'Britta Holt',
+            status : 'dd',
+            type : 'a'
+          }
+        ],
+      }
+    },
+    computed: {
+      filteredItems() {
+        return this.items.filter(item => {
+          if(!this.search && !this.selectStatus && !this.selectType) return this.items;
+          return (item.title.toLowerCase().includes(this.search.toLowerCase()) && item.status.includes(this.selectStatus) && item.type.includes(this.selectType));
+        });
+      }
     }
   }
-}
-</script>
+  </script>
